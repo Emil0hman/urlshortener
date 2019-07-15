@@ -9,6 +9,7 @@ document.querySelector('.form button').addEventListener('click', _ => {
         if (xhttp.readyState == 4) {
             // Display URL
             let res = xhttp.responseText;
+            if (res === '') document.querySelector('.form .newurl').innerHTML = `<span style="color: red">No URL Specified</span>`; // If the response is blank, add an error text
             document.querySelector('.form .newurl').innerHTML = `http://emilohman.nu/projects/url/l?l=${res}`; // I know, not very short, but this is just a proof of concept
         }
     };

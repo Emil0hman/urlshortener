@@ -13,7 +13,7 @@
     }
 
     $url = $_GET['url'];
-    if ($url == "") die('<span style="color:red">No URL Specified</span>'); // If no URL is specified, return a formatted string
+    if ($url == "") die(''); // If no URL is specified, return nothing
 
     // Get contents of file and decode JSON to a PHP stdObject
     $json = file_get_contents('./database/urls.json');
