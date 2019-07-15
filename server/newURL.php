@@ -20,7 +20,7 @@
     $data = json_decode($json);
 
     // If a URL is enterd that is in the databse, return that so no copies are stored
-    if ($data->$url) { // If URL is already taken
+    if (isset($data->$url)) { // If URL is already taken
         echo $data->$url; // Echo the url in the JSON file
         die();
     }
