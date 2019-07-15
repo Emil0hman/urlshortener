@@ -3,7 +3,7 @@ document.querySelector('.form button').addEventListener('click', _ => {
 
     // Make an AJAX request and add file into database
     var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", `http://192.168.1.17:8888/newURL.php?url=${longURL}`, true);
+    xhttp.open("GET", `http://emilohman.nu/projects/url/server/newURL.php?url=${longURL}`, true);
     xhttp.send();
     xhttp.onreadystatechange = _ => {
         if (xhttp.readyState == 4) {
